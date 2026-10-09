@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simeon Sakala | Student Portfolio</title>
+  <meta name="description" content="Personal portfolio of Simeon Sakala, a Computer Science student at Mulungushi University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home"><S class="SAKALA"></S></a>
+      <button id="nav-toggle" class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#hobbies">My Hobbies</a></li>
+          <li><a href="#learning">My Learning Plan</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#photos">My Photos</a></li>
+          <li><a href="#media">My Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="page-title">
+      <div class="hero-text">
+        <h1 id="page-title">SIMEON SAKALA</h1>
+        <p class="programme">Computer Science student, School of Engineering and Technology, Mulungushi University</p>
+        <p class="intro">I build small, working programs in Java and Python, and I am learning to bring them to the web. This site shows what I have made and what I am learning next.</p>
+        <a class="btn" href="#projects">View My Projects</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About Me</h2>
+      <p> I am a first-year student at Mulungushi University, studying a programme that combines
+        computer science with mathematics, physics, chemistry and communication skills. In my
+        Java and object-oriented programming course I have worked with control flow, classes and
+        small lab projects such as a student attendance system, while my data structures course
+        has covered sorting, stacks, queues and hashing. Alongside programming, I study engineering
+        mathematics, introductory physics and chemistry, which give me a strong problem-solving
+        foundation. I am currently building my first websites in ICT251 Web Technologies and I am
+        excited to keep improving my HTML, CSS and JavaScript skills over the rest of the course.</p>
+    </section>
+
+    <section id="hobbies" aria-labelledby="hobbies-h">
+      <h2 id="hobbies-h">My Hobbies</h2>
+      <ul class="hobby-list">
+        <li><strong>Reading novels.</li>
+        <li><strong>watching football.</li>
+        <li><strong>coding.</li>
+      </ul>
+    </section>
+
+    <section id="learning" aria-labelledby="learning-h">
+      <h2 id="learning-h">My Learning Plan</h2>
+      <ol class="steps">
+        <li>Finish the web basics: HTML structure, CSS layout and JavaScript events.</li>
+        <li>Practise Java object-oriented design by rebuilding my lab programs as larger projects.</li>
+        <li>Study data structures and algorithms until I can explain each one without notes.</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Subjects I am studying this semester</caption>
+          <thead>
+            <tr><th scope="col">Subject</th><th scope="col">Main topics</th><th scope="col">Goal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Web Technologies (ICT251)</td><td>HTML5, CSS, JavaScript, deployment</td><td>Publish a working portfolio</td></tr>
+            <tr><td>Data Structures (ICT102)</td><td>Hashing, sorting, stacks, queues</td><td>Trace any algorithm by hand</td></tr>
+            <tr><td>Java and OOP (ICT261)</td><td>Classes, constructors, control flow</td><td>Design clean classes</td></tr>
+            <tr><td>Digital designing (ICT221)</td><td>Central processing unit, truth tables, Boolean algebra</td><td>Solve problems accurately</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Study hours calculator</h3>
+      <p class="muted">Plan how long you will study each week.</p>
+      <form id="hours-form" class="inline-form" novalidate>
+        <div class="field">
+          <label for="hours-day">Hours per day</label>
+          <input id="hours-day" name="hours-day" type="text" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="days-week">Days per week (1 to 7)</label>
+          <input id="days-week" name="days-week" type="text" inputmode="numeric" autocomplete="off">
+        </div>
+        <button class="btn" type="submit">Calculate</button>
+      </form>
+      <p id="hours-result" class="result" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects and Skills</h2>
+      <p>Four things I have learned, each with a program I wrote to practise it.</p>
+
+      <div class="filter-bar">
+        <div class="field grow">
+          <label for="project-search">Search projects by name or skill</label>
+          <input id="project-search" type="search" placeholder="Try Java, Python or recursion" autocomplete="off">
+        </div>
+        <button id="filter-reset" class="btn btn-secondary" type="button">Reset</button>
+      </div>
+      <p id="filter-message" class="result" role="status" aria-live="polite"></p>
+
+      <div class="project-grid">
+        <article class="project" data-keywords="palindrome python arrays strings">
+          <h3>Palindrome checker</h3>
+          <p>Skill: arrays and string handling in Python.</p>
+          <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="detail-1">Show details</button>
+          <div id="detail-1" class="detail" hidden>
+            <p>The program stores the characters in an array and compares the first and last items, moving inwards. I learned how to stop early when a mismatch is found.</p>
+          </div>
+        </article>
+        <article class="project" data-keywords="recursion factorial fibonacci flowchart pseudocode algorithms">
+          <h3>Factorial and Fibonacci</h3>
+          <p>Skill: recursion, flowcharts and pseudocode.</p>
+          <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="detail-2">Show details</button>
+          <div id="detail-2" class="detail" hidden>
+            <p>I drew the flowchart and wrote the pseudocode first, then coded both functions. Writing the base case before anything else stopped my recursion from running forever.</p>
+          </div>
+        </article>
+        <article class="project" data-keywords="recycle bin cleaner python java files utility">
+          <h3>Recycle Bin cleaner</h3>
+          <p>Skill: working with files in Python and Java.</p>
+          <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="detail-3">Show details</button>
+          <div id="detail-3" class="detail" hidden>
+            <p>I built the same utility in two languages and compared them. It taught me how each language handles files, errors and permissions.</p>
+          </div>
+        </article>
+        <article class="project" data-keywords="student attendance java oop classes counter">
+          <h3>Student attendance system</h3>
+          <p>Skill: object-oriented design in Java.</p>
+          <button class="toggle-btn" type="button" aria-expanded="false" aria-controls="detail-4">Show details</button>
+          <div id="detail-4" class="detail" hidden>
+            <p>A lab program that models students and their attendance with classes and constructors. It showed me why keeping data private inside a class makes code easier to trust.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="photos" aria-labelledby="photos-h">
+      <h2 id="photos-h">My Photos</h2>
+      <div class="gallery" id="gallery">
+        <figure class="slide">
+          <img src="./images/ds.png" alt="Placeholder image for photo one. Replace this text with a description of your first photo." width="800" height="500">
+          <figcaption>Photo 1: replace with your caption</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="./images/yt.png" alt="Placeholder image for photo two. Replace this text with a description of your second photo." width="800" height="500">
+          <figcaption>Photo 2: replace with your caption</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="./images/wd.png" alt="Placeholder image for photo three. Replace this text with a description of your third photo." width="800" height="500">
+          <figcaption>Photo 3: replace with your caption</figcaption>
+        </figure>
+        <div class="gallery-controls">
+          <button id="prev-photo" class="btn btn-secondary" type="button">Previous</button>
+          <span id="photo-count" aria-live="polite"></span>
+          <button id="next-photo" class="btn btn-secondary" type="button">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" aria-labelledby="media-h">
+      <h2 id="media-h">My Media</h2>
+      <div class="media-grid">
+        <div>
+          <h3>Short video</h3>
+          <video controls preload="metadata" width="640">
+            <source src="./videos/video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+          <p class="muted">Summary: replace this with two sentences describing what your video shows.</p>
+        </div>
+        <div>
+          <h3>Short audio</h3>
+          <audio controls></audio>
+            <source src="audio/audio.mp3." type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+          <p class="media-transcript"><strong>transcript:</strong>"my name is simeon sakala am a computer studies student at mulungushi university.my favourite hobbies are reading novels, watching football and coding under html, JavaScript and c++ and the reason why i choose this program its cause of the money."</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p class="demo-note"><strong>Browser demonstration only. No message is sent.</strong></p>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+          <span class="error" id="name-error" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+          <span class="error" id="email-error" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="error" id="message-error" aria-live="polite"></span>
+        </div>
+        <button class="btn" type="submit">Check my message</button>
+      </form>
+      <div id="form-preview" class="preview" role="status" aria-live="polite" hidden>
+        <h3>Preview: your details passed validation</h3>
+        <p>These details were validated in your browser. They were not sent or saved anywhere.</p>
+        <dl>
+          <dt>Name</dt><dd id="preview-name"></dd>
+          <dt>Email</dt><dd id="preview-email"></dd>
+          <dt>Message</dt><dd id="preview-message"></dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 SIMEON SAKALA. ICT251 Web Technologies, Mulungushi University.</p>
+    <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY">View Source on GitHub</a></p>
+  </footer>
+</body>
+</html>
